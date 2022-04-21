@@ -32,7 +32,7 @@ public class UserRegistrationTest {
 
     @Test
     public void validatePassword(String password){
-        storePattern.setPasswordPattern("\"^(?=.{8,})(?=.*[a-z])(?=.*[A-Z]).*$");
+        storePattern.setPasswordPattern("^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$");
         String passPattern= storePattern.getPasswordPattern();
         storePattern.validatingInput(password,passPattern,"Password");
     }
