@@ -23,11 +23,18 @@ public class UserRegistrationTest {
         String mail = storePattern.getEmail();
         storePattern.validatingInput(email, mail, "Email");
     }
-
+    @Test
     public void validateMobNumber(String number){
         storePattern.setMobileNumber("^[0-9]{2}\s?[0-9]{10}");
         String mobPattern= storePattern.getMobileNumber();
         storePattern.validatingInput(number,mobPattern,"Mobile Number");
+    }
+
+    @Test
+    public void validatePassword(String password){
+        storePattern.setPasswordPattern("^[a-zA-Z0-9]{8,}$");
+        String passPattern= storePattern.getPasswordPattern();
+        storePattern.validatingInput(password,passPattern,"Password");
     }
 
 }

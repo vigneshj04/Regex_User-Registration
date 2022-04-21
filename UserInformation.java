@@ -7,6 +7,7 @@ public class UserInformation {
     private String lastName;
     public  String email;
     private String mobileNumber;
+    private String passwordPattern;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -49,4 +50,11 @@ public class UserInformation {
             System.out.println("Entered "+option+ " : " +input+" is invalid");
     }
 
+    public String getPasswordPattern() {
+        return passwordPattern;
+    }
+
+    public void setPasswordPattern(String passwordPattern) {
+        this.passwordPattern = passwordPattern;
+    }
 }
