@@ -12,6 +12,7 @@ public class UserRegistrationMain {
         System.out.println("3.TO Validate Email id");
         System.out.println("4.To Validate Mobile Number");
         System.out.println("5.To Validate Password");
+        System.out.println("6.To Validate all emails list");
         System.out.println("Enter the option number to perform the operation");
         int option = scan.nextInt();
         switch(option){
@@ -40,6 +41,11 @@ public class UserRegistrationMain {
                 System.out.println("Enter the Password. Note: minimum 8 characters should be given");
                 String password= scan.next();
                 validate.validatePassword(password);
+                break;
+            case 6:
+                System.out.println("Validating all samples emails list");
+                String[] emails = {"abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com"};
+                UserRegistrationTest.validateEmailsList(emails);
                 break;
             default:
                 System.out.println("Please Enter valid option to validate the pattern");

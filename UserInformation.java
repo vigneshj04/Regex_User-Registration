@@ -57,4 +57,5 @@ public class UserInformation {
     public void setPasswordPattern(String passwordPattern) {
         this.passwordPattern = passwordPattern;
     }
+
 }
