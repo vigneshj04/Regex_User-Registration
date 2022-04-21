@@ -9,6 +9,7 @@ public class UserRegistrationMain {
         Scanner scan = new Scanner(System.in);
         System.out.println("1.To Validate the First name.");
         System.out.println("2.To Validate the Last Name.");
+        System.out.println("3.TO Validate Email id");
         System.out.println("Enter the option number to perform the operation");
         int option = scan.nextInt();
         switch(option){
@@ -18,9 +19,14 @@ public class UserRegistrationMain {
                 validate.validateFirstName(firstName);
                 break;
             case 2:
-                System.out.println("2.Enter the Last name(Note:First letter should be capital): ");
+                System.out.println("Enter the Last name(Note:First letter should be capital): ");
                 String lastName = scan.next();
                 validate.validateLastName(lastName);
+                break;
+            case 3:
+                System.out.println("Enter the email id: ");
+                String email = scan.next();
+                validate.validateEmail(email);
                 break;
             default:
                 System.out.println("Please Enter valid option to validate the pattern");
