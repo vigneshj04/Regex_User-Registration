@@ -6,6 +6,7 @@ public class UserInformation {
     private String firstName;
     private String lastName;
     public  String email;
+    private String mobileNumber;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -29,6 +30,14 @@ public class UserInformation {
 
     public String getEmail() {
         return lastName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 
     public void validatingInput(String input,String checkPattern,String option){
